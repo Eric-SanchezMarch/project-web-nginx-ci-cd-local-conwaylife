@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');  
+
+body{
+    /*background-color: rgb(235, 235, 235);  Color fons pantalla */
+    background-image: url('https://i.ibb.co/yQYw8h9/c1beeaea-1fed-4933-9246-118d97da6086.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: rgb(29, 28, 31);/* Color text */
+    font-family: 'Nunito', sans-serif;
+}
+
+a{  /* Estil que tindran tots els enllaços */
+    text-decoration: none;
+    color:rgb(87, 162, 238);/* Estandar windows */   
+}
+
+a:hover{ /* Cuan pasem el ratoli per damun de un enllaç */
+    text-decoration: underline; /* Subrallem */
+    color:rgb(150, 151, 243);/* Estandar Windows*/   
+}
+
+img{
+    width: 100%;    /* Les imatges tindran un 100% de ample */
+}
+
+#navbar{
+    background-color: rgb(0, 0, 0);
+    font-weight: bold;
+    position: fixed; /**/
+    left: 0;
+    top: 0;
+    display:block;
+    width: 100%;
+    z-index: 100;
+    overflow: hidden;
+}
+
+#navbar ul{  /* Dins de navbar a ul*/
+    list-style-type: none; /* Quin punt de llista usarem, pot ser rodo, cuadrat... o cap */
+    margin: 0; /* es el espai entre marges */
+    padding: 0; /* es el espai entre els elements */
+    overflow: hidden; /* la propietat overflow especfica: si cal retallar contingut, dibuixar barres de desplaçaent o mostrar el contingut excedent en un element a nivell de bloc */
+    /* en aquest cas el nivell de bloc es tota la llista */
+    z-index: 100; /* indica el z-order de un element i descendets. Cuan varis elements es superposen, z-order determina quins cubreixen als altres, un element con mayor z-index generalment cubrix a otro inferior */
+
+}
+
+#navbar li{
+    float: left;
+
+}
+
+#navbar li a{
+    padding: 10px 20px; /* apliquem un espai entre els elements de 10px adal i abaix i 5px a esquerra i dreta  */
+    display: inline-block;  /* despleguem els elements en linea */
+    text-decoration: none;
+    font-size: 1em;     /* una mesura del tamany de font*/
+    text-align: center; /* aliniem els elements al centre */
+    color: aliceblue;
+}
+
+#navbar li.active a{
+    color: rgb(228, 172, 20);
+}
+
+#navbar li a:hover{  /* Cuan pasem el cursor per damun dels links  */
+    background-color: rgb(49, 47, 46);
+    color: rgb(255, 255, 255);   
+}
+
+#navbar li.active a:hover{  /* Cuan pasem el cursor per damun dels links  */
+    background-color: rgb(49, 47, 46);
+    color: rgb(228, 172, 20);    
+}
+
+form{
+    max-width: 750px;
+    
+    border-radius: 10px;
+    margin:0 auto;
+
+}
+
+form div{
+    padding: 15px;
+}
+
+input{
+    width: 90%;
+    display: block;
+}
+
+
+button{
+    margin-left: 20px;
+    height: 50px;
+    padding: 15px;
+    background-color:rgb(228, 169, 8);
+    font-weight:bold;
+    color:rgb(255, 255, 255);
+    border-radius: 1em;
+}
+
+#juegoVida button:hover{
+    background-color: rgb(247, 200, 72);
+  
+}
+#juegoVida button:active{
+    background-color: rgba(245, 40, 40, 0.849);
+  
+}
+
+.myicono{   /* Aplicarem estil al icono que em tret de fontawesone, podem elegir el color, mida.... com si fos ascii */
+    color: aliceblue;
+    font-size: 1.5em;
+    padding: 10px;
+    display: none; /* Farem desapareixer per el moment el icono per a jugar amb ell despres */
+    text-align: center;
+}
+
+.lista-sm{
+    display:block;
+}
+
+#content {
+    /* border: 1px solid; /* pintem un borde de 1px de grossor alrededor del contingut */
+    max-width: 1180px; /* el maxim que ocupara el contingut de ample */
+    position: relative; /* amb relative les propietats de top y bottom especifiquen eld esplaçament vertical desdel origen, left y right especifiquen el desplaçament horitzontal */
+    top: 30px; /* com la posicio es relativa el text es moura verticalment 40px  */
+    margin:auto;
+    height: auto;   
+    padding: 3%;
+
+}
+
+#content header{
+    height: 100px;
+    padding: 10px 10px;
+    margin: auto;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 10%, rgba(7, 7, 7, 0.23) 30%, rgba(255,255,255,1) 32%, rgba(0,0,0,0.2329306722689075) 34%, rgba(0,0,0,0) 54%);
+    border-radius: 1em;
+    color: rgb(216, 216, 200);
+    
+}
+
+#content header h1{
+
+    color: rgb(255, 255, 255);
+}
+#content header i{
+    
+    padding: 9px 15px 15px 9px;
+    font-weight: bold;
+    color: rgb(228, 171, 15);
+}
+
+#content section video{
+    top: 0px;
+    width: 100%;
+     /* el maxim que ocupara el contingut de ample */  
+    margin:auto;
+    height: auto;   
+    padding: 0px;
+}
+
+#content section{
+    padding: 33px 20px;
+    margin-left: 20px;
+    margin-top: 20; /* separacio entre seccio i seccio*/
+    height: auto;
+    width: 83%;
+    border-radius: 0.5em;
+    color: rgb(255, 255, 255);
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(44, 44, 43, 0.9) 0%, rgba(26, 26, 24, 0.933) 100%);
+}
+
+#content section h2{
+    color: rgb(228, 172, 20);
+    margin:20px 0px;
+    font-weight: bold;
+}
+
+
+
+/*Para js en breus*/
+#content section canvas{
+    padding: 0px 0px;
+    height: auto;
+    width: 100%;
+}
+
+#content footer{
+
+    clear:both; /* Es un keyword que indica que el elemento es movido hacia abajo para limpiar tanto elementos flotantes de la izquierda como de la derecha. */
+    width: 100%;
+    height: 60px;
+    padding: 25px;
+    text-align: center;
+    background-color: rgba(66, 52, 52, 0.479);
+    border-radius: 1em;
+    color: beige;
+
+}
+
+@media screen and (max-width:720px) {
+    #content{
+        padding: 0;
+        width: auto;
+    } 
+
+    #content header{
+        padding: 30px 10px;
+        border-radius: 0;
+    }
+    #principal{
+        width: auto;
+        float: none;
+    }
+
+    #content section{
+        
+        margin: 0px 0px ; /* separacio entre seccio i seccio*/
+        padding: 4%;
+        width: 100%;
+
+    }
+
+    #content footer{
+        width: auto;
+    }
+
+    .lista-sm{
+        display: none;
+    }
+
+    #navbar li{
+        float: none;
+        display: block;
+    }
+     #navbar li a{
+        padding: 5px;
+        text-align:left;
+        width: 100%;
+    } 
+
+    .myicono{
+        display: block;
+    }
+}
+
