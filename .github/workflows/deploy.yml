@@ -1,0 +1,22 @@
+name: CI/CD Local Deploy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Copy web files to staging folder
+        run: |
+          mkdir -p /tmp/web_new
+          cp -r ./web/* /tmp/web_new/
+
+      - name: Run local deploy script
+        run: |
+          sudo /usr/local/bin/deploy_nginx.sh
