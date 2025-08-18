@@ -1,276 +1,551 @@
-
-<!DOCTYPE html;>
-<html>
-    <head>
-        <!-- metadates -->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <!-- Titul web -->
-        <title>Autómatas celulares</title>
-        <!-- API bootstrap per a redimencionar i escalar automaticament la pagina web  -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-        <!-- Kit emoticons i logotips fontawesome  -->
-        <script src="https://kit.fontawesome.com/673e409a26.js" crossorigin="anonymous"></script>
-        <!-- Estils CSS -->
-        <link rel="stylesheet" type="text/css" href="estilos.css">
-    </head> 
-    <body >
-        <nav id="navbar"> <!-- otorgarem al nav una id per tal de saber que aquest objecte es la nostra barra de navegacio -->
-            <div class="myicono"><i class="fas fa-th"></i> Autómatas celulares</div> <!-- Afegim el icono de fontawesone dins un div -->
-            <ul class="lista-sm">
-                <li><a href="#scroll1"><i class="fas fa-th"></i>  Inicio</a></li>
-                <li><a href="#scroll2"><i class="fas fa-book"></i> Informacion</a></li>
-                <li><a href="#scroll3"><i class="far fa-heart"></i> Juego de la vida</a></li>
-                <li><a href="#scroll4"><i class="far fa-user"></i> Contacto</a></li>
-            </ul>
-        </nav> 
-
-        <div id="content">
-           
-            <br id="scroll1">
-            <br>
-            <br>
-            <section id="inicio">
-                 <header>
-                <h1><i class="fas fa-th"></i> Automatas celulares</h1>
-            </header>
-            <br>
-                     <video width="auto" height="auto" autoplay muted>
-                        <source src="gl.mp4" type="video/mp4">
-                      Your browser does not support the video tag.
-                      </video>
-                      <br>
-                      <br>
-                      <cite >"the game of life for Conway" by <a href="https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg">Dot CSV</a></cite>
-                      <br>
-                      <br>
-
-                    <p> Saludos internauta!
-                    Si has llegado aquí es porque seguramente has oído ha hablar del juego de la vida, 
-                    o sino porque realmente quieres comprender las posibilidades que traen los autómatas celulares.
-                    Sea como sea, ¡Aquí aprenderás el concepto de autómata celular en pocos minutos!, un poco de su historia, que es 
-                    y cómo funciona el juego de la vida i las conclusiones finales.
-                    <br>
-                    <br>
-                      ¡Empecemos!</p>
-
-            </section>
-
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br>
-             <br id="scroll2">
-             <br>
-             <br>
-             <br>         
-            <section id="informacion">
-                <header>
-                    <h1><i class="fas fa-book"></i>Informacion</h1>
-                </header>
-                    <article>
-                        <h2> ¿Qué es un autómata?</h2>
-                        <p>
-                        En nuestra era actual, con el avance tecnológico que disfrutamos, a un autómata se lo puede comprender como una máquina automática programable 
-                        capaz de realizar determinadas operaciones de manera autónoma para sustituir a los seres humanos en algunas tareas, en especial las pesadas, 
-                        repetitivas o peligrosas; como lo son los distintos brazos robotizados o una maquina de doblar barras de hierro.
-                        <br><br>
-                        En realidad, los autómatas son mucho más viejos y conocidos por el ser humano de lo que la sociedad tiende a creer: <br><br>
-                        <cite >" En el siglo VIII a. de C., Homero, en su célebre Ilíada, ya describe a <a href="https://www.escueladeescritores.com/masalladeorion/homero-primer-androide-historia/" target="_blank">sirvientes mecánicos</a> dotados de inteligencia construidos por Hefesto, 
-                                el dios de la metalurgia. "<a href="https://www.xatakaciencia.com/robotica/los-primeros-automatas-de-la-historia" target="_blank">extracto de xataka</a> </cite>   
-                        </p>
-                    </article>
-
-                    <br>
-
-                    <p>Si leíste las referencias anteriores seguramente intuirás que los autómatas celulares, por ende, tampoco son tan nuevos, aunque tampoco tan viejos, entonces
-                     qué es y cuando se inventaron los autómatas celulares?</p>
-                        
-                     <br>
-                     <br>
-                    
-                     <article>
-                        <h2>¿Qué son los autómatas celulares?</h2>
-                        <p>
-                            Son sistemas descubiertos dentro del campo de la <a href="https://es.wikipedia.org/wiki/F%C3%ADsica_computacional"  target="_blank">física computacional</a> 
-                            por <a href="https://es.wikipedia.org/wiki/John_von_Neumann" target="_blank">John von Neumann</a> en la década de 1950.
-                            <br>
-                            La física computacional nos permite hacer distintas simulaciones que nos permiten generar predicciones muy precisas sobre como se comportan los sistemas dinamicos. 
-                            
-                            <br>
-                            No existe una definición formal y matemática aceptada de autómata celular; sin embargo, se puede describir a un A.C. 
-                            como una <a href="https://es.wikipedia.org/wiki/Tupla" target="_blank">tupla</a>.
-                        </p>
-                    </article>
-
-
-                    <br><br>
-
-                    <article>
-                            <h2>John Horton Conway</h2>
-                           <p> <a href="https://es.wikipedia.org/wiki/John_Horton_Conway" target="_blank">John Horton Conway</a> fue un gran matemático, 
-                            especialista en la teoría de grupos, de números, de juegos, nudos y teoría de códigos, 
-                            pero fue especialmente conocido por la invención del Juego de la vida, uno de los primeros ejemplos de autómata celular y uno de los
-                            sistemas dinamicos mas conocidos por hoy.
-                            Conway estaba interesado en solventar un problema presentado en los años cuarenta por un matemático de renombre, <a href="https://es.wikipedia.org/wiki/John_von_Neumann" target="_blank">John Von Newman</a>  quien intento crear una máquina
-                            hipotética que fuera capaz de construir copias de si misma, cosa que consiguió basándose en un modelo matemático que se desarrollaba en tablero cuadriculado 
-                            con una gran cantidad de denominarse desde entonces un autómata celular.
-                            </p>
-                     </article> 
-
-
-                     <br>
-                     <br>
-
-                    <article>
-                        <h2>¿Qué es el juego de la vida?</h2>
-                        <p>Desde un punto de vista teórico, es interesante porque es equivalente a una 
-                            <a href="https://es.wikipedia.org/wiki/M%C3%A1quina_de_Turing_universal" target="_blank">máquina universal de Turing</a> , es decir,
-                            todo lo que se puede computar algorítmicamente se puede computar en el juego de la vida.
-                            <br>
-                            <br>
-                             El juego de la vida es el exitoso intento de John Horton Conway de simplificar las
-                            indeas de John von Newman. 
-                            Su objetivo era crear un sistema dinamnico que simulase la vida y su naturaleza impredecible. Conway probó a aplicar muchas y distintas reglas,
-                             algunas hacían que las células murieran muy pronto y otras hacían que nunca murieran. para alfin lograr las 3 reglas que permitian 
-                             crear un equilibrio entre la vida y la muerte
-
-                        </p>
-                    </article> 
-                    
-                    <br>
-                    <br>
-
-                   <article>
-                       <h2>Las reglas del juego:</h2>
-                       
-                       <p><span style="font-weight: 400;">Las reglas del juego son las siguientes:</span></p>
-
-                        <ul>
-                            <li style="font-weight: 400;"><span style="font-weight: 400;">Si una célula está viva y tiene dos o tres vecinas vivas, sobrevive.</span></li>
-                            <li style="font-weight: 400;"><span style="font-weight: 400;">Si una célula está muerta y tiene tres vecinas vivas, </span><span style="font-weight: 400;">nace</span><span style="font-weight: 400;">.</span></li>
-                            <li style="font-weight: 400;"><span style="font-weight: 400;">Si una célula está viva y tiene más de tres vecinas </span><span style="font-weight: 400;">vivas</span><span style="font-weight: 400;">, muere.</span></li>
-                        </ul>
-
-                
-                   </article> 
-
-   
-               </section>
-
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br id="scroll3">
-                <br>
-                <br>
-                <br> 
-                <section id="juegoVida">
-                    <header>
-                        <h1><i class="far fa-heart"></i>Juego de la vida</h1>
-                    </header>
-                    <p>
-                        ¿Listo para jugar?
-                        <br>
-                        <br>
-                        En las partidas podrás observar distintos patrones y figuras geométricas, 
-                        hay algunas que son más difíciles que otras que surjan aleatoriamente, pulsa el botón para hacer una tirada y dar vida a nuestro sistema bajo las normas de Conway.
-                        <br>
-                        Cada tirada es unica! <button onclick="inicializa();">PLAY</button>
-                    </p>
-                    <br><br>
-                    <canvas id="canvas" style="border:1px solid #00000000"></canvas>
-                    <br><br>
-                    <p>
-                        Puedes descargarte este mismo proyecto como plantilla -><a href="https://github.com/emakt/juegodelaVida" target="_blank">Click aqui!</a>.   
-                    </p>
-
-                </section>
-
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br id="scroll4">
-                <br>
-                <br>
-                <br>
-                
-                <section id="contacto">
-                    <header>
-                        <h1><i class="far fa-user"></i></i> Contacto</h1>
-                    </header>
-                    <br>  
-                    <form>
-                        <div>Nombre:<input type="text" name="nombre"</div>
-                        <div>Email: <input type="email" name="email"</div>
-                        <div><button type="submit">Enviar mensaje</button></div>
-                    </form> 
-                </section>
-                <br>
-                <br>
-                <br>
-                <br>
-                <br>
-            <footer>
-                <p>Copyright (c) 2021</p>
-            </footer>
-        </div>
-        <!-- Afegim la llibreria jquery -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <!-- Afegim el script js per treballar amb jquery -->
-        <script src="script.js"></script>
-        <script src="juegomain.js"></script>
-    </body>
+
+
+<!DOCTYPE html;>
+
+<html>
+
+    <head>
+
+        <!-- metadates -->
+
+        <meta charset="UTF-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+        <!-- Titul web -->
+
+        <title>Autómatas celulares</title>
+
+        <!-- API bootstrap per a redimencionar i escalar automaticament la pagina web  -->
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+        <!-- Kit emoticons i logotips fontawesome  -->
+
+        <script src="https://kit.fontawesome.com/673e409a26.js" crossorigin="anonymous"></script>
+
+        <!-- Estils CSS -->
+
+        <link rel="stylesheet" type="text/css" href="estilos.css">
+
+    </head> 
+
+    <body >
+
+        <nav id="navbar"> <!-- otorgarem al nav una id per tal de saber que aquest objecte es la nostra barra de navegacio -->
+
+            <div class="myicono"><i class="fas fa-th"></i> Autómatas celulares</div> <!-- Afegim el icono de fontawesone dins un div -->
+
+            <ul class="lista-sm">
+
+                <li><a href="#scroll1"><i class="fas fa-th"></i>  Inicio</a></li>
+
+                <li><a href="#scroll2"><i class="fas fa-book"></i> Informacion</a></li>
+
+                <li><a href="#scroll3"><i class="far fa-heart"></i> Juego de la vida</a></li>
+
+                <li><a href="#scroll4"><i class="far fa-user"></i> Contacto</a></li>
+
+            </ul>
+
+        </nav> 
+
+
+
+        <div id="content">
+
+           
+
+            <br id="scroll1">
+
+            <br>
+
+            <br>
+
+            <section id="inicio">
+
+                 <header>
+
+                <h1><i class="fas fa-th"></i> TEST Automatas celulares</h1>
+
+            </header>
+
+            <br>
+
+                     <video width="auto" height="auto" autoplay muted>
+
+                        <source src="gl.mp4" type="video/mp4">
+
+                      Your browser does not support the video tag.
+
+                      </video>
+
+                      <br>
+
+                      <br>
+
+                      <cite >"the game of life for Conway" by <a href="https://www.youtube.com/channel/UCy5znSnfMsDwaLlROnZ7Qbg">Dot CSV</a></cite>
+
+                      <br>
+
+                      <br>
+
+
+
+                    <p> Saludos internauta!
+
+                    Si has llegado aquí es porque seguramente has oído ha hablar del juego de la vida, 
+
+                    o sino porque realmente quieres comprender las posibilidades que traen los autómatas celulares.
+
+                    Sea como sea, ¡Aquí aprenderás el concepto de autómata celular en pocos minutos!, un poco de su historia, que es 
+
+                    y cómo funciona el juego de la vida i las conclusiones finales.
+
+                    <br>
+
+                    <br>
+
+                      ¡Empecemos!</p>
+
+
+
+            </section>
+
+
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+            <br>
+
+             <br>
+
+             <br>
+
+             <br>
+
+             <br>
+
+             <br>
+
+             <br>
+
+             <br>
+
+             <br>
+
+             <br id="scroll2">
+
+             <br>
+
+             <br>
+
+             <br>         
+
+            <section id="informacion">
+
+                <header>
+
+                    <h1><i class="fas fa-book"></i>Informacion</h1>
+
+                </header>
+
+                    <article>
+
+                        <h2> ¿Qué es un autómata?</h2>
+
+                        <p>
+
+                        En nuestra era actual, con el avance tecnológico que disfrutamos, a un autómata se lo puede comprender como una máquina automática programable 
+
+                        capaz de realizar determinadas operaciones de manera autónoma para sustituir a los seres humanos en algunas tareas, en especial las pesadas, 
+
+                        repetitivas o peligrosas; como lo son los distintos brazos robotizados o una maquina de doblar barras de hierro.
+
+                        <br><br>
+
+                        En realidad, los autómatas son mucho más viejos y conocidos por el ser humano de lo que la sociedad tiende a creer: <br><br>
+
+                        <cite >" En el siglo VIII a. de C., Homero, en su célebre Ilíada, ya describe a <a href="https://www.escueladeescritores.com/masalladeorion/homero-primer-androide-historia/" target="_blank">sirvientes mecánicos</a> dotados de inteligencia construidos por Hefesto, 
+
+                                el dios de la metalurgia. "<a href="https://www.xatakaciencia.com/robotica/los-primeros-automatas-de-la-historia" target="_blank">extracto de xataka</a> </cite>   
+
+                        </p>
+
+                    </article>
+
+
+
+                    <br>
+
+
+
+                    <p>Si leíste las referencias anteriores seguramente intuirás que los autómatas celulares, por ende, tampoco son tan nuevos, aunque tampoco tan viejos, entonces
+
+                     qué es y cuando se inventaron los autómatas celulares?</p>
+
+                        
+
+                     <br>
+
+                     <br>
+
+                    
+
+                     <article>
+
+                        <h2>¿Qué son los autómatas celulares?</h2>
+
+                        <p>
+
+                            Son sistemas descubiertos dentro del campo de la <a href="https://es.wikipedia.org/wiki/F%C3%ADsica_computacional"  target="_blank">física computacional</a> 
+
+                            por <a href="https://es.wikipedia.org/wiki/John_von_Neumann" target="_blank">John von Neumann</a> en la década de 1950.
+
+                            <br>
+
+                            La física computacional nos permite hacer distintas simulaciones que nos permiten generar predicciones muy precisas sobre como se comportan los sistemas dinamicos. 
+
+                            
+
+                            <br>
+
+                            No existe una definición formal y matemática aceptada de autómata celular; sin embargo, se puede describir a un A.C. 
+
+                            como una <a href="https://es.wikipedia.org/wiki/Tupla" target="_blank">tupla</a>.
+
+                        </p>
+
+                    </article>
+
+
+
+
+
+                    <br><br>
+
+
+
+                    <article>
+
+                            <h2>John Horton Conway</h2>
+
+                           <p> <a href="https://es.wikipedia.org/wiki/John_Horton_Conway" target="_blank">John Horton Conway</a> fue un gran matemático, 
+
+                            especialista en la teoría de grupos, de números, de juegos, nudos y teoría de códigos, 
+
+                            pero fue especialmente conocido por la invención del Juego de la vida, uno de los primeros ejemplos de autómata celular y uno de los
+
+                            sistemas dinamicos mas conocidos por hoy.
+
+                            Conway estaba interesado en solventar un problema presentado en los años cuarenta por un matemático de renombre, <a href="https://es.wikipedia.org/wiki/John_von_Neumann" target="_blank">John Von Newman</a>  quien intento crear una máquina
+
+                            hipotética que fuera capaz de construir copias de si misma, cosa que consiguió basándose en un modelo matemático que se desarrollaba en tablero cuadriculado 
+
+                            con una gran cantidad de denominarse desde entonces un autómata celular.
+
+                            </p>
+
+                     </article> 
+
+
+
+
+
+                     <br>
+
+                     <br>
+
+
+
+                    <article>
+
+                        <h2>¿Qué es el juego de la vida?</h2>
+
+                        <p>Desde un punto de vista teórico, es interesante porque es equivalente a una 
+
+                            <a href="https://es.wikipedia.org/wiki/M%C3%A1quina_de_Turing_universal" target="_blank">máquina universal de Turing</a> , es decir,
+
+                            todo lo que se puede computar algorítmicamente se puede computar en el juego de la vida.
+
+                            <br>
+
+                            <br>
+
+                             El juego de la vida es el exitoso intento de John Horton Conway de simplificar las
+
+                            indeas de John von Newman. 
+
+                            Su objetivo era crear un sistema dinamnico que simulase la vida y su naturaleza impredecible. Conway probó a aplicar muchas y distintas reglas,
+
+                             algunas hacían que las células murieran muy pronto y otras hacían que nunca murieran. para alfin lograr las 3 reglas que permitian 
+
+                             crear un equilibrio entre la vida y la muerte
+
+
+
+                        </p>
+
+                    </article> 
+
+                    
+
+                    <br>
+
+                    <br>
+
+
+
+                   <article>
+
+                       <h2>Las reglas del juego:</h2>
+
+                       
+
+                       <p><span style="font-weight: 400;">Las reglas del juego son las siguientes:</span></p>
+
+
+
+                        <ul>
+
+                            <li style="font-weight: 400;"><span style="font-weight: 400;">Si una célula está viva y tiene dos o tres vecinas vivas, sobrevive.</span></li>
+
+                            <li style="font-weight: 400;"><span style="font-weight: 400;">Si una célula está muerta y tiene tres vecinas vivas, </span><span style="font-weight: 400;">nace</span><span style="font-weight: 400;">.</span></li>
+
+                            <li style="font-weight: 400;"><span style="font-weight: 400;">Si una célula está viva y tiene más de tres vecinas </span><span style="font-weight: 400;">vivas</span><span style="font-weight: 400;">, muere.</span></li>
+
+                        </ul>
+
+
+
+                
+
+                   </article> 
+
+
+
+   
+
+               </section>
+
+
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br id="scroll3">
+
+                <br>
+
+                <br>
+
+                <br> 
+
+                <section id="juegoVida">
+
+                    <header>
+
+                        <h1><i class="far fa-heart"></i>Juego de la vida</h1>
+
+                    </header>
+
+                    <p>
+
+                        ¿Listo para jugar?
+
+                        <br>
+
+                        <br>
+
+                        En las partidas podrás observar distintos patrones y figuras geométricas, 
+
+                        hay algunas que son más difíciles que otras que surjan aleatoriamente, pulsa el botón para hacer una tirada y dar vida a nuestro sistema bajo las normas de Conway.
+
+                        <br>
+
+                        Cada tirada es unica! <button onclick="inicializa();">PLAY</button>
+
+                    </p>
+
+                    <br><br>
+
+                    <canvas id="canvas" style="border:1px solid #00000000"></canvas>
+
+                    <br><br>
+
+                    <p>
+
+                        Puedes descargarte este mismo proyecto como plantilla -><a href="https://github.com/emakt/juegodelaVida" target="_blank">Click aqui!</a>.   
+
+                    </p>
+
+
+
+                </section>
+
+
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+               <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br id="scroll4">
+
+                <br>
+
+                <br>
+
+                <br>
+
+                
+
+                <section id="contacto">
+
+                    <header>
+
+                        <h1><i class="far fa-user"></i></i> Contacto</h1>
+
+                    </header>
+
+                    <br>  
+
+                    <form>
+
+                        <div>Nombre:<input type="text" name="nombre"</div>
+
+                        <div>Email: <input type="email" name="email"</div>
+
+                        <div><button type="submit">Enviar mensaje</button></div>
+
+                    </form> 
+
+                </section>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+                <br>
+
+            <footer>
+
+                <p>Copyright (c) 2021</p>
+
+            </footer>
+
+        </div>
+
+        <!-- Afegim la llibreria jquery -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+        <!-- Afegim el script js per treballar amb jquery -->
+
+        <script src="script.js"></script>
+
+        <script src="juegomain.js"></script>
+
+    </body>
+
 </html>
